@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-background text-text-primary;
+}
+/* Swiper pagination container */
+/* Increase specificity to beat Swiper defaults */
+.swiper .swiper-pagination {
+  position: relative !important; /* override default absolute */
+  inset: auto !important; /* reset top/right/bottom/left */
+  margin-top: 2rem; /* فاصله از اسلایدر */
+  text-align: center;
+}
+/* Also override horizontal placement rule from Swiper */
+.swiper.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-horizontal > .swiper-pagination-bullets {
+  bottom: auto !important;
+  top: auto !important;
+  left: 0 !important;
+  width: 100% !important;
+}
+
+/* bullets style */
+.swiper .swiper-pagination-bullet {
+  background: #D1C4E9 !important; /* رنگ خاکستری/یاسی برای غیرفعال */
+  opacity: 1 !important;
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* فاصله بین دایره‌ها */
+.swiper .swiper-pagination-bullet:not(:last-child) {
+  margin: 0 6px !important;
+}
+
+/* active bullet */
+.swiper .swiper-pagination-bullet-active {
+  background: #7B1FA2 !important; /* بنفش پررنگ برای فعال */
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 9999px;
+}
