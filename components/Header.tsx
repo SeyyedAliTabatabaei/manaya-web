@@ -22,7 +22,7 @@ export default function Header() {
         <div className="flex items-center  justify-between  md:justify-normal ">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 pl-10">
-            <Image src="/logo.svg" alt="مانایا" width={52} height={32} />
+            <Image src="/logo.svg" alt="مانایا | حسابداری شخصی" width={52} height={32} />
             <span className="font-black text-xl text-primary ">مانایا</span>
           </Link>
 
