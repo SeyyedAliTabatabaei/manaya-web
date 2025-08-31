@@ -38,7 +38,7 @@ export default function Header() {
 
           {/* Actions: Theme + Mobile Menu */}
           <div className="flex items-center gap-2 md:mr-auto">
-            <div className="hidden md:block">
+            <div className=" ">
               <ThemeToggle />
             </div>
             <button

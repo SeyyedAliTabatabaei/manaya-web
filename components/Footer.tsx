@@ -13,6 +13,7 @@ export default function Footer() {
         { href: "/terms", label: "قوانین و حریم خصوصی" },
         { href: "/about", label: "درباره ما" },
     ];
+    console.log(resolvedTheme);
 
     return (
         <footer className=" bg-surface">
@@ -42,19 +43,19 @@ export default function Footer() {
                         <p className="font-bold text-base text-text-primary ">دانلود اپلیکیشن</p>
                         <div className="flex flex-row gap-3 md:flex-col">
                             <Link href="https://myket.ir/app/ir.manaya" target="_blank" className="hover:opacity-90 transition">
-                                <Image 
-                                    src={resolvedTheme === 'dark' ? "/tempImage/DownloadMyket-dark.svg" : "/tempImage/DownloadMyket.svg"} 
-                                    alt="دریافت و دانلود اپلیکیشن حسابداری شخصی مانایا از مایکت" 
-                                    width={180} 
-                                    height={56} 
+                                <Image
+                                    src={resolvedTheme === 'dark' ? "/tempImage/DownloadMyket-dark.svg" : "/tempImage/DownloadMyket.svg"}
+                                    alt="دریافت و دانلود اپلیکیشن حسابداری شخصی مانایا از مایکت"
+                                    width={180}
+                                    height={56}
                                 />
                             </Link>
                             <Link href="https://cafebazaar.ir/app/ir.manaya" target="_blank" className="hover:opacity-90 transition">
-                                <Image 
-                                    src={resolvedTheme === 'dark' ? "/tempImage/DownloadBazaar-dark.svg" : "/tempImage/DownloadBazaar.svg"} 
-                                    alt="دریافت و دانلود اپلیکیشن حسابداری شخصی مانایا از کافه بازار" 
-                                    width={180} 
-                                    height={56} 
+                                <Image
+                                    src={resolvedTheme === 'dark' ? "/tempImage/DownloadBazaar-dark.svg" : "/tempImage/DownloadBazaar.svg"}
+                                    alt="دریافت و دانلود اپلیکیشن حسابداری شخصی مانایا از کافه بازار"
+                                    width={180}
+                                    height={56}
                                 />
                             </Link>
                         </div>

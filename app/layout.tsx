@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Vazirmatn } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
- import { ThemeProvider } from "next-themes";
+import { ThemeProvider } from "next-themes";
 
 const vazirmatn = Vazirmatn({ subsets: ["arabic"], weight: ["400", "600", "700"] });
 

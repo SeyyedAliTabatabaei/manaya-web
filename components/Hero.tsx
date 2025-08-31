@@ -1,14 +1,9 @@
- 
-"use client";
-
-import { useTheme } from "next-themes";
 import Container from "@/components/Container";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function Hero() {
-  const { resolvedTheme } = useTheme();
-  return (
+   return (
     <section className=" md:pb-32">
       <Container className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12 lg:gap-20">
         {/* متن */}
@@ -24,27 +19,25 @@ export default function Hero() {
           <div className="flex flex-wrap gap-3 justify-center lg:justify-start pt-2">
             <Link href="https://cafebazaar.ir/app/ir.manaya" aria-label="دانلود از بازار">
               <Image
-                src={resolvedTheme === 'dark' 
-                  ? "/tempImage/DownloadBazaar-dark.svg" 
-                  : "/tempImage/DownloadBazaar.svg"
+                src={
+                  "/tempImage/DownloadBazaar.svg"
                 }
                 alt="دریافت و دانلود اپلیکیشن حسابداری شخصی مانایا از کافه بازار"
                 width={160}
                 height={50}
-                className="w-[140px] md:w-[170px] h-auto"
+                className="w-[140px] md:w-[170px] h-auto [&_text]:fill-white"
                 priority
               />
             </Link>
             <Link href="https://myket.ir/app/ir.manaya" aria-label="دانلود از مایکت">
               <Image
-                src={resolvedTheme === 'dark' 
-                  ? "/tempImage/DownloadMyket-dark.svg" 
-                  : "/tempImage/DownloadMyket.svg"
+                src={
+                  "/tempImage/DownloadMyket.svg"
                 }
                 alt="دریافت و دانلود اپلیکیشن حسابداری شخصی مانایا از مایکت"
                 width={160}
                 height={50}
-                className="w-[140px] md:w-[170px] h-auto"
+                className="w-[140px] md:w-[170px] h-auto [&_text]:fill-white"
               />
             </Link>
           </div>

@@ -38,16 +38,15 @@ export default function ThemeToggle() {
       aria-label={isDark ? "تغییر به حالت روشن" : "تغییر به حالت تیره"}
       title={isDark ? "روشن" : "تیره"}
       onClick={() => setIsDark((v) => !v)}
-      className="inline-flex items-center gap-2 rounded-full border border-divider bg-surface px-3 py-1.5 text-sm text-text-secondary hover:text-primary transition"
+      className="inline-flex items-center gap-2  px-3 py-1.5 text-sm text-text-secondary hover:text-primary transition"
     >
       {isDark ? (
         // Sun icon
-        <Image src="/icons/Sun1-Linear-32px.svg" alt="مانایا" className="text-primary-variant" width={20} height={20} />
+        <Image src="/icons/Sun1-Linear-32px.svg" alt="مانایا" className="text-primary-variant" width={24} height={24} />
       ) : (
         // Moon icon
-        <Image src="/icons/Moon-Linear-32px.svg" alt="مانایا" className="text-primary-variant" width={20} height={20} />
+        <Image src="/icons/Moon-Linear-32px.svg" alt="مانایا" className="text-primary-variant" width={24} height={24} />
       )}
-      {/* <span className="hidden sm:inline">{isDark ? "روشن" : "تیره"}</span> */}
-    </button>
+     </button>
   );
 }
