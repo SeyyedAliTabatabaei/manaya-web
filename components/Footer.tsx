@@ -37,11 +37,11 @@ export default function Footer() {
                     <div className="order-2 md:order-3 flex flex-col items-start md:items-end gap-4 ">
                         <p className="font-bold text-base text-text-primary ">دانلود اپلیکیشن</p>
                         <div className="flex flex-row gap-3 md:flex-col">
-                            <Link href="https://myket.ir" target="_blank" className="hover:opacity-90 transition">
-                                <Image src="/tempImage/DownloadMyket.svg" alt="دریافت از مایکت" width={180} height={56} />
+                            <Link href="https://myket.ir/app/ir.manaya" target="_blank" className="hover:opacity-90 transition">
+                                <Image src="/tempImage/DownloadMyket.svg" alt="دریافت و دانلود اپلیکیشن حسابداری شخصی مانایا از مایکت" width={180} height={56} />
                             </Link>
-                            <Link href="https://cafebazaar.ir" target="_blank" className="hover:opacity-90 transition">
-                                <Image src="/tempImage/DownloadBazaar.svg" alt="دریافت از بازار" width={180} height={56} />
+                            <Link href="https://cafebazaar.ir/app/ir.manaya" target="_blank" className="hover:opacity-90 transition">
+                                <Image src="/tempImage/DownloadBazaar.svg" alt="دریافت و دانلود اپلیکیشن حسابداری شخصی مانایا از کافه بازار" width={180} height={56} />
                             </Link>
                         </div>
                     </div>

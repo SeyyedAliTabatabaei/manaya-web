@@ -8,11 +8,14 @@ const vazirmatn = Vazirmatn({ subsets: ["arabic"], weight: ["400", "600", "700"]
 
 export const metadata: Metadata = {
   title: {
-    default: "مانایا ",
+    default: "مانایا | حسابداری شخصی ",
     template: "%s | مانایا",
   },
   description: "لندینگ مدرن با Next.js، TypeScript و Tailwind CSS",
-  metadataBase: new URL("http://localhost:3000"),
+  metadataBase: new URL("https://manaya-acc.ir"),
+    icons: {
+      icon: '/logo.svg'
+    }
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
