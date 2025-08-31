@@ -144,20 +144,20 @@ export default function Hero() {
 
           {/* دکمه‌های دانلود */}
           <div className="flex flex-wrap gap-3 justify-center lg:justify-start pt-2">
-            <Link href="#" aria-label="دانلود از بازار">
+            <Link href="https://cafebazaar.ir/app/ir.manaya" aria-label="دانلود از بازار">
               <Image
                 src="/tempImage/DownloadBazaar.svg"
-                alt="دانلود از بازار"
+                alt="دریافت و دانلود اپلیکیشن حسابداری شخصی مانایا از کافه بازار"
                 width={160}
                 height={50}
                 className="w-[140px] md:w-[170px] h-auto"
                 priority
               />
             </Link>
-            <Link href="#" aria-label="دانلود از مایکت">
+            <Link href="https://myket.ir/app/ir.manaya" aria-label="دانلود از مایکت">
               <Image
                 src="/tempImage/DownloadMyket.svg"
-                alt="دانلود از مایکت"
+                alt="دریافت و دانلود اپلیکیشن حسابداری شخصی مانایا از مایکت"
                 width={160}
                 height={50}
                 className="w-[140px] md:w-[170px] h-auto"

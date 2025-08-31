@@ -29,7 +29,7 @@ export default function Values() {
                                 className="bg-surface shadow-sm rounded-2xl py-10 px-6 text-start flex flex-col gap-3 hover:bg-card-inner-bg transition"
                             >
                                 <div className="flex text-start gap-2 mb-3">
-                                    <Image src={item.icon ?? "/icons/check.svg"} className="text-primary" alt={item.title} width={20} height={20} />
+                                    <Image src={item.icon ?? "/icons/check.svg"} className="text-primary" alt={item.title} width={25} height={25} />
                                     <h3 className="font-extrabold text-xl text-text-primary">{item.title}</h3>
                                 </div>
                                 <p className="text-text-secondary text-sm">{item.desc}</p>
