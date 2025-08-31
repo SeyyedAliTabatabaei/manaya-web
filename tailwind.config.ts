@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: "class",
   content: [
     "./app/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
@@ -8,65 +9,65 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#7B1FA2",
-        "primary-variant": "#4A0072",
-        "primary-dark": "#BA68CB",
+        primary: "var(--color-primary)",
+        "primary-variant": "var(--color-primary-variant)",
+        "primary-dark": "var(--color-primary-dark)",
 
-        secondary: "#E040FB",
-        "secondary-dark": "#CE93D8",
+        secondary: "var(--color-secondary)",
+        "secondary-dark": "var(--color-secondary-dark)",
 
-        background: "#F2F0F5",
-        "background-dark": "#121212",
+        background: "var(--color-background)",
+        "background-dark": "var(--color-background-dark)",
 
-        surface: "#FFFFFF",
-        "surface-dark": "#1E1B24",
+        surface: "var(--color-surface)",
+        "surface-dark": "var(--color-surface-dark)",
 
-        "card-inner-bg": "#ECE7F1",
-        "card-inner-bg-dark": "#2A2530",
+        "card-inner-bg": "var(--color-card-inner-bg)",
+        "card-inner-bg-dark": "var(--color-card-inner-bg-dark)",
 
-        "text-primary": "#212121",
-        "text-primary-dark": "#FFFFFF",
+        "text-primary": "var(--color-text-primary)",
+        "text-primary-dark": "var(--color-text-primary-dark)",
 
-        "text-secondary": "#616161",
-        "text-secondary-dark": "#B0B0B0",
+        "text-secondary": "var(--color-text-secondary)",
+        "text-secondary-dark": "var(--color-text-secondary-dark)",
 
-        "text-hint": "#9E9E9E",
+        "text-hint": "var(--color-text-hint)",
 
-        divider: "#E0E0E0",
-        "divider-dark": "#373737",
+        divider: "var(--color-divider)",
+        "divider-dark": "var(--color-divider-dark)",
 
-        "bottom-nav-bg": "#FFFFFF",
-        "bottom-nav-bg-dark": "#1E1E1E",
+        "bottom-nav-bg": "var(--color-bottom-nav-bg)",
+        "bottom-nav-bg-dark": "var(--color-bottom-nav-bg-dark)",
 
-        "icon-color": "#7B1FA2",
-        "icon-color-dark": "#CE93D8",
+        "icon-color": "var(--color-icon-color)",
+        "icon-color-dark": "var(--color-icon-color-dark)",
 
-        green: "#4CAF50",
-        "green-dark": "#81C784",
+        green: "var(--color-green)",
+        "green-dark": "var(--color-green-dark)",
 
-        "green-light": "#C8E6C9",
-        "green-light-dark": "#388E3C80", // 45% opacity
+        "green-light": "var(--color-green-light)",
+        "green-light-dark": "var(--color-green-light-dark)", // 45% opacity
 
-        red: "#D32F2F",
-        "red-dark": "#EF5350",
+        red: "var(--color-red)",
+        "red-dark": "var(--color-red-dark)",
 
-        "red-light": "#FFCDD2",
-        "red-light-dark": "#B71C1C80", // 45% opacity
+        "red-light": "var(--color-red-light)",
+        "red-light-dark": "var(--color-red-light-dark)", // 45% opacity
 
-        blue: "#2196F3",
-        "blue-dark": "#64B5F6",
+        blue: "var(--color-blue)",
+        "blue-dark": "var(--color-blue-dark)",
 
-        yellow: "#FFC107",
-        "yellow-dark": "#FFD54F",
+        yellow: "var(--color-yellow)",
+        "yellow-dark": "var(--color-yellow-dark)",
 
-        "indicator-selected": "#7B1FA2",
-        "indicator-selected-dark": "#CE93D8",
+        "indicator-selected": "var(--color-indicator-selected)",
+        "indicator-selected-dark": "var(--color-indicator-selected-dark)",
 
-        "indicator-unselected": "#D1C4E9",
-        "indicator-unselected-dark": "#555555",
+        "indicator-unselected": "var(--color-indicator-unselected)",
+        "indicator-unselected-dark": "var(--color-indicator-unselected-dark)",
 
-        "button-disabled-bg": "#DDD6E3",
-        "button-disabled-bg-dark": "#3A3540",
+        "button-disabled-bg": "var(--color-button-disabled-bg)",
+        "button-disabled-bg-dark": "var(--color-button-disabled-bg-dark)",
       },
     },
     container: {

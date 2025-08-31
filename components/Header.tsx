@@ -5,6 +5,7 @@ import Container from "@/components/Container";
 import { useState } from "react";
 import Image from "next/image";
 import type { Route } from "next";
+import ThemeToggle from "@/components/ThemeToggle";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,20 +36,30 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Mobile Button */}
-          <button
-            className="md:hidden p-2 text-text-secondary"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-            </svg>
-          </button>
+          {/* Actions: Theme + Mobile Menu */}
+          <div className="flex items-center gap-2 md:mr-auto">
+            <div className="hidden md:block">
+              <ThemeToggle />
+            </div>
+            <button
+              type="button"
+              className="md:hidden p-2 text-text-secondary"
+              aria-label={isOpen ? "بستن منو" : "باز کردن منو"}
+              aria-expanded={isOpen}
+              aria-controls="mobile-menu"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+              </svg>
+            </button>
+          </div>
+          
         </div>
 
         {/* Mobile Nav */}
         {isOpen && (
-          <div className="md:hidden flex flex-col gap-4 py-4 text-sm text-text-secondary border-t border-divider">
+          <div id="mobile-menu" className="md:hidden flex flex-col gap-4 py-4 text-sm text-text-secondary border-t border-divider">
             {navItems.map((item) => (
               <Link
                 key={item.href}

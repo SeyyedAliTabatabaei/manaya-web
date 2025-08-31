@@ -3,7 +3,67 @@
 @tailwind utilities;
 
 :root {
+  /* Light theme (default) */
   color-scheme: light;
+  --color-primary: #7B1FA2;
+  --color-primary-variant: #4A0072;
+  --color-primary-dark: #BA68CB;
+
+  --color-secondary: #E040FB;
+  --color-secondary-dark: #CE93D8;
+
+  --color-background: #F2F0F5;
+  --color-background-dark: #121212; /* reference only */
+
+  --color-surface: #FFFFFF;
+  --color-surface-dark: #1E1B24; /* reference only */
+
+  --color-card-inner-bg: #ECE7F1;
+  --color-card-inner-bg-dark: #2A2530; /* reference only */
+
+  --color-text-primary: #212121;
+  --color-text-primary-dark: #FFFFFF; /* reference only */
+
+  --color-text-secondary: #616161;
+  --color-text-secondary-dark: #B0B0B0; /* reference only */
+
+  --color-text-hint: #9E9E9E;
+
+  --color-divider: #E0E0E0;
+  --color-divider-dark: #373737; /* reference only */
+
+  --color-bottom-nav-bg: #FFFFFF;
+  --color-bottom-nav-bg-dark: #1E1E1E; /* reference only */
+
+  --color-icon-color: #7B1FA2;
+  --color-icon-color-dark: #CE93D8; /* reference only */
+
+  --color-green: #4CAF50;
+  --color-green-dark: #81C784; /* reference only */
+
+  --color-green-light: #C8E6C9;
+  --color-green-light-dark: #388E3C80; /* 45% opacity, reference */
+
+  --color-red: #D32F2F;
+  --color-red-dark: #EF5350; /* reference only */
+
+  --color-red-light: #FFCDD2;
+  --color-red-light-dark: #B71C1C80; /* 45% opacity, reference */
+
+  --color-blue: #2196F3;
+  --color-blue-dark: #64B5F6; /* reference only */
+
+  --color-yellow: #FFC107;
+  --color-yellow-dark: #FFD54F; /* reference only */
+
+  --color-indicator-selected: #7B1FA2;
+  --color-indicator-selected-dark: #CE93D8; /* reference only */
+
+  --color-indicator-unselected: #D1C4E9;
+  --color-indicator-unselected-dark: #555555; /* reference only */
+
+  --color-button-disabled-bg: #DDD6E3;
+  --color-button-disabled-bg-dark: #3A3540; /* reference only */
 }
 
 html {
@@ -13,6 +73,45 @@ html {
 body {
   @apply bg-background text-text-primary;
 }
+
+/* Dark theme overrides */
+.dark {
+  color-scheme: dark;
+  --color-primary: #BA68CB; /* brighter purple on dark */
+  --color-primary-variant: #CE93D8;
+  --color-primary-dark: #E1BEE7;
+
+  --color-secondary: #CE93D8;
+  --color-secondary-dark: #E1BEE7;
+
+  --color-background: #121212;
+  --color-surface: #1E1B24;
+  --color-card-inner-bg: #2A2530;
+
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #B0B0B0;
+  --color-text-hint: #9E9E9E;
+
+  --color-divider: #373737;
+  --color-bottom-nav-bg: #1E1E1E;
+
+  --color-icon-color: #CE93D8;
+
+  --color-green: #81C784;
+  --color-green-light: #388E3C80; /* translucent */
+
+  --color-red: #EF5350;
+  --color-red-light: #B71C1C80;
+
+  --color-blue: #64B5F6;
+  --color-yellow: #FFD54F;
+
+  --color-indicator-selected: #CE93D8;
+  --color-indicator-unselected: #555555;
+
+  --color-button-disabled-bg: #3A3540;
+}
+
 /* Swiper pagination container */
 /* Increase specificity to beat Swiper defaults */
 .swiper .swiper-pagination {
@@ -32,7 +131,7 @@ body {
 
 /* bullets style */
 .swiper .swiper-pagination-bullet {
-  background: #D1C4E9 !important; /* رنگ خاکستری/یاسی برای غیرفعال */
+  background: var(--color-indicator-unselected) !important; /* غیرفعال */
   opacity: 1 !important;
   width: 12px !important;
   height: 12px !important;
@@ -48,7 +147,7 @@ body {
 
 /* active bullet */
 .swiper .swiper-pagination-bullet-active {
-  background: #7B1FA2 !important; /* بنفش پررنگ برای فعال */
+  background: var(--color-indicator-selected) !important; /* فعال */
   width: 12px !important;
   height: 12px !important;
   border-radius: 9999px;

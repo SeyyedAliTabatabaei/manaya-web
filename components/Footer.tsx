@@ -1,9 +1,13 @@
+"use client";
+
+import { useTheme } from "next-themes";
 import Container from "@/components/Container";
 import Link from "next/link";
 import Image from "next/image";
 import type { Route } from "next";
 
 export default function Footer() {
+    const { resolvedTheme } = useTheme();
     const links: { href: Route; label: string }[] = [
         { href: "/faq", label: "سوالات متداول" },
         { href: "/terms", label: "قوانین و حریم خصوصی" },
@@ -38,10 +42,20 @@ export default function Footer() {
                         <p className="font-bold text-base text-text-primary ">دانلود اپلیکیشن</p>
                         <div className="flex flex-row gap-3 md:flex-col">
                             <Link href="https://myket.ir/app/ir.manaya" target="_blank" className="hover:opacity-90 transition">
-                                <Image src="/tempImage/DownloadMyket.svg" alt="دریافت و دانلود اپلیکیشن حسابداری شخصی مانایا از مایکت" width={180} height={56} />
+                                <Image 
+                                    src={resolvedTheme === 'dark' ? "/tempImage/DownloadMyket-dark.svg" : "/tempImage/DownloadMyket.svg"} 
+                                    alt="دریافت و دانلود اپلیکیشن حسابداری شخصی مانایا از مایکت" 
+                                    width={180} 
+                                    height={56} 
+                                />
                             </Link>
                             <Link href="https://cafebazaar.ir/app/ir.manaya" target="_blank" className="hover:opacity-90 transition">
-                                <Image src="/tempImage/DownloadBazaar.svg" alt="دریافت و دانلود اپلیکیشن حسابداری شخصی مانایا از کافه بازار" width={180} height={56} />
+                                <Image 
+                                    src={resolvedTheme === 'dark' ? "/tempImage/DownloadBazaar-dark.svg" : "/tempImage/DownloadBazaar.svg"} 
+                                    alt="دریافت و دانلود اپلیکیشن حسابداری شخصی مانایا از کافه بازار" 
+                                    width={180} 
+                                    height={56} 
+                                />
                             </Link>
                         </div>
                     </div>
