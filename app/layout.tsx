@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   },
   description: "لندینگ مدرن با Next.js، TypeScript و Tailwind CSS",
   metadataBase: new URL("https://manaya-acc.ir"),
+    icons: {
+      icon: '/logo.svg'
+    }
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
