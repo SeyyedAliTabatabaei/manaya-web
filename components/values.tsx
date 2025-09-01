@@ -15,7 +15,7 @@ export default function Values() {
         chunks.push(values.slice(i, i + 3));
     }
     return (
-        <section className=" py-16 border-t ">
+        <section className=" py-16 border-t border-divider ">
             <div className="max-w-6xl mx-auto px-4">
                 {/* Title */}
                 <SectionTitle>ارزش‌های اصلی مانایا</SectionTitle>
