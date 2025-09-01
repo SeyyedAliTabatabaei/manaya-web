@@ -12,7 +12,7 @@ export default async function Page() {
     <>
       <Hero />
       <Values />
-      <section>
+      <section aria-label="نظرات کاربران اپلیکیشن مانایا">
         <Container className="py-12 md:py-16 border-t border-divider">
           <div className="mb-8 text-center">
             <SectionTitle>صدای کاربران ما</SectionTitle>
