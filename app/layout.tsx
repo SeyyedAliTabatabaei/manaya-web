@@ -3,7 +3,8 @@ import type { Metadata } from "next";
 import { Vazirmatn } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { ThemeProvider } from "next-themes";
+// import { ThemeProvider } from "next-themes";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 const vazirmatn = Vazirmatn({ subsets: ["arabic"], weight: ["400", "600", "700"] });
 
@@ -24,15 +25,16 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="fa" dir="rtl" className="h-full" suppressHydrationWarning>
-      <body className={`${vazirmatn.className} min-h-screen flex flex-col`}>
+    return (
+        <html lang="fa" dir="rtl" className="h-full" suppressHydrationWarning>
+        <body className={`${vazirmatn.className} min-h-screen flex flex-col`}>
+        {/* ThemeProvider از next-themes */}
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <Header />
-          <main className="flex-grow">{children}</main>
-          <Footer />
+            <Header />
+            <main className="flex-grow">{children}</main>
+            <Footer />
         </ThemeProvider>
-      </body>
-    </html>
-  );
+        </body>
+        </html>
+    );
 }

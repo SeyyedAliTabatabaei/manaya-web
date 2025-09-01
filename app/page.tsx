@@ -13,7 +13,7 @@ export default async function Page() {
       <Hero />
       <Values />
       <section>
-        <Container className="py-12 md:py-16 border-t">
+        <Container className="py-12 md:py-16 border-t border-divider">
           <div className="mb-8 text-center">
             <SectionTitle>صدای کاربران ما</SectionTitle>
             <p className="text-text-secondary mt-5">

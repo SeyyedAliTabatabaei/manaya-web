@@ -1,9 +1,15 @@
+"use client";
+
+
 import Container from "@/components/Container";
 import Link from "next/link";
 import Image from "next/image";
+import {useThemeCustom} from "@/components/ThemeProvider";
 
 export default function Hero() {
-   return (
+    const { isDark } = useThemeCustom();
+
+    return (
     <section className=" md:pb-32">
       <Container className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12 lg:gap-20">
         {/* متن */}
@@ -19,9 +25,7 @@ export default function Hero() {
           <div className="flex flex-wrap gap-3 justify-center lg:justify-start pt-2">
             <Link href="https://cafebazaar.ir/app/ir.manaya" aria-label="دانلود از بازار">
               <Image
-                src={
-                  "/tempImage/DownloadBazaar.svg"
-                }
+                  src={isDark ? "/tempImage/DownloadBazaar-dark.svg" : "/tempImage/DownloadBazaar.svg"}
                 alt="دریافت و دانلود اپلیکیشن حسابداری شخصی مانایا از کافه بازار"
                 width={160}
                 height={50}
@@ -31,9 +35,7 @@ export default function Hero() {
             </Link>
             <Link href="https://myket.ir/app/ir.manaya" aria-label="دانلود از مایکت">
               <Image
-                src={
-                  "/tempImage/DownloadMyket.svg"
-                }
+                  src={isDark ? "/tempImage/DownloadMyket-dark.svg" : "/tempImage/DownloadMyket.svg"}
                 alt="دریافت و دانلود اپلیکیشن حسابداری شخصی مانایا از مایکت"
                 width={160}
                 height={50}
