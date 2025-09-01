@@ -12,9 +12,9 @@ export default async function FAQPage() {
         پاسخ سؤالات متداول خود را از اینجا بخوانید </p>
       <div className="space-y-4 mt-10 ">
         {faqs.map((f, idx) => (
-          <details key={idx} className="group bg-surface rounded-xl border p-4 open:shadow-sm">
+          <details key={idx} className="group bg-surface rounded-xl border border-divider p-4 open:shadow-sm">
             <summary className="cursor-pointer select-none font-medium">{f.question}</summary>
-            <div className="pt-2 text-gray-700">{f.answer}</div>
+            <div className="pt-2 text-text-secondary">{f.answer}</div>
           </details>
         ))}
       </div>
