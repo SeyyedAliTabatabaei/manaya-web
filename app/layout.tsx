@@ -33,7 +33,7 @@ export const metadata: Metadata = {
             "اپلیکیشن حسابداری شخصی مانایا برای مدیریت مالی، ثبت تراکنش و کنترل هزینه‌ها.",
         images: [
             {
-                url: "https://manaya-acc.ir/og-image.jpg",
+                url: "https://manaya-acc.ir/tempImage/imagePreview.png",
                 width: 1200,
                 height: 630,
                 alt: "مانایا | حسابداری شخصی",
