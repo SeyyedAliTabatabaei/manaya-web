@@ -25,27 +25,43 @@ const ThemeContext = createContext<ThemeContextType>({
     toggleTheme: () => {},
 });
 
-export function ThemeProvider({ children }: { children: React.ReactNode }) {
+type ThemeProviderProps = {
+    children: React.ReactNode;
+    attribute?: string;
+    defaultTheme?: "light" | "dark" | "system";
+    enableSystem?: boolean;
+};
+
+export function ThemeProvider({
+                                  children,
+                                  attribute,
+                                  defaultTheme = "system",
+                                  enableSystem = true,
+                              }: ThemeProviderProps) {
     const [isDark, setIsDark] = useState(false);
 
     useEffect(() => {
-        setIsDark(getPreferredDark());
-    }, []);
+        if (defaultTheme === "system") {
+            setIsDark(getPreferredDark());
+        } else {
+            setIsDark(defaultTheme === "dark");
+        }
+    }, [defaultTheme]);
 
     useEffect(() => {
         const root = document.documentElement;
         if (isDark) {
-            root.classList.add("dark");
+            root.classList.add(attribute || "dark");
             try {
                 localStorage.setItem("theme", "dark");
             } catch {}
         } else {
-            root.classList.remove("dark");
+            root.classList.remove(attribute || "dark");
             try {
                 localStorage.setItem("theme", "light");
             } catch {}
         }
-    }, [isDark]);
+    }, [isDark, attribute]);
 
     const toggleTheme = () => setIsDark((v) => !v);
 
@@ -55,6 +71,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
         </ThemeContext.Provider>
     );
 }
+
 
 export function useThemeCustom() {
     return useContext(ThemeContext);

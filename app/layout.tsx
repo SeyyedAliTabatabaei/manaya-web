@@ -62,7 +62,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     return (
         <html lang="fa" dir="rtl" className="h-full" suppressHydrationWarning>
         <body className={`${vazirmatn.className} min-h-screen flex flex-col`}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider>
             <Header />
             <main className="flex-grow">{children}</main>
             <Footer />
