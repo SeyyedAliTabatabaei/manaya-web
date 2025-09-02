@@ -1,4 +1,3 @@
-"use client";
 
 export default function TermsList({ terms }: { terms: { body: string }[] }) {
     return (
