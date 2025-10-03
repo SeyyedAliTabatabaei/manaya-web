@@ -15,7 +15,7 @@ export default function PaymentResultPage() {
 
     return (
         <Container>
-            <div className="py-16 border-t border-divider shadow-lg rounded-2xl p-8 w-full max-w-md text-center">
+            <div className="py-16 bg-surface border-t border-divider shadow-lg rounded-2xl p-8 w-full max-w-md text-center">
                 <h1
                     className={`text-2xl font-bold mb-4 ${
                         success ? "text-green-600" : "text-red-600"
@@ -34,12 +34,15 @@ export default function PaymentResultPage() {
                     </div>
                 )}
 
-                {/*<button*/}
-                {/*    onClick={() => (window.location.href = "/")}*/}
-                {/*    className="mt-6 w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg transition"*/}
-                {/*>*/}
-                {/*    بازگشت به خانه*/}
-                {/*</button>*/}
+                <button
+                    onClick={() => {
+                        window.location.href = "manaya://payment/result";
+                    }}
+                    className="mt-6 w-full bg-primary hover:bg-blue-700 text-white py-2 rounded-lg transition"
+                >
+                    بازگشت به مانایا
+                </button>
+
             </div>
         </Container>
     );
