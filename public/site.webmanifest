@@ -1,0 +1,16 @@
+{
+  "name": "مانایا | حسابداری شخصی",
+  "short_name": "مانایا",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#121212",
+  "lang": "fa",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
