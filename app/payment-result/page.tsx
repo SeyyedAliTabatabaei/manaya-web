@@ -1,9 +1,10 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 import Container from "@/components/Container";
 
-export default function PaymentResultPage() {
+function PaymentResultContent() {
     const searchParams = useSearchParams();
 
     const success = searchParams.get("success") === "true";
@@ -11,7 +12,6 @@ export default function PaymentResultPage() {
     const amount = searchParams.get("data[amount]");
     const refId = searchParams.get("data[ref_id]");
     const daysRemaining = searchParams.get("data[days_remaining]");
-
 
     return (
         <Container>
@@ -42,8 +42,15 @@ export default function PaymentResultPage() {
                 >
                     بازگشت به مانایا
                 </button>
-
             </div>
         </Container>
+    );
+}
+
+export default function PaymentResultPage() {
+    return (
+        <Suspense fallback={<div className="text-center py-20">در حال بارگذاری...</div>}>
+            <PaymentResultContent />
+        </Suspense>
     );
 }
