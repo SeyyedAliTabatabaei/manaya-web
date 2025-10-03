@@ -3,7 +3,7 @@
 import { useSearchParams } from "next/navigation";
 import Container from "@/components/Container";
 
-export default async function PaymentResultPage() {
+export default function PaymentResultPage() {
     const searchParams = useSearchParams();
 
     const success = searchParams.get("success") === "true";
