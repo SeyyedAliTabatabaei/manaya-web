@@ -28,9 +28,9 @@ export default async function PaymentResultPage() {
 
                 {success && (
                     <div className="space-y-2 text-text-primary">
-                        <p><span className="font-semibold">مبلغ: </span>{amount} ریال</p>
-                        <p><span className="font-semibold">کد پیگیری: </span>{refId}</p>
-                        <p><span className="font-semibold">روزهای باقی‌مانده اشتراک: </span>{daysRemaining}</p>
+                        <p><span className="text-lg">مبلغ: </span>{amount} ریال</p>
+                        <p><span className="text-lg">کد پیگیری: </span>{refId}</p>
+                        <p><span className="text-lg">روزهای باقی‌مانده اشتراک: </span>{daysRemaining}</p>
                     </div>
                 )}
 
