@@ -10,6 +10,7 @@ export default function PaymentResultContent() {
     const message = searchParams.get("message") || "";
     const amount = searchParams.get("amount");
     const refId = searchParams.get("ref_id");
+    const orderId = searchParams.get("order_id");
     const daysRemaining = searchParams.get("days_remaining");
 
     return (
@@ -25,13 +26,17 @@ export default function PaymentResultContent() {
 
                 <p className="text-text-secondary mb-6">{decodeURIComponent(message)}</p>
 
-                {success && (
-                    <div className="space-y-2 text-text-primary">
-                        <p><span className="text-lg">مبلغ: </span>{amount} ریال</p>
-                        <p><span className="text-lg">کد پیگیری: </span>{refId}</p>
-                        <p><span className="text-lg">روزهای باقی‌مانده اشتراک: </span>{daysRemaining}</p>
-                    </div>
-                )}
+                <div className="space-y-2 text-text-primary">
+                    <p><span className="text-lg">مبلغ: </span>{amount && Number(amount).toLocaleString()} ریال </p>
+                    <p><span className="text-lg">شماره سفارش: </span>{orderId}</p>
+                    {success && (
+                        <>
+                            <p><span className="text-lg">کد پیگیری پرداخت: </span>{refId}</p>
+                            <p><span className="text-lg">روزهای باقی‌مانده اشتراک: </span>{daysRemaining}</p>
+                        </>
+                    )}
+                </div>
+
 
                 <button
                     onClick={() => {
