@@ -6,14 +6,14 @@ export default function PaymentResultPage() {
     return (
         <Container>
             PaymentResultPage
-            {/* <Suspense fallback={
+            <Suspense fallback={
                 <div className="py-16 border-t border-divider shadow-lg rounded-2xl p-8 w-full max-w-md text-center">
                     <p>در حال بارگذاری...</p>
                 </div>
             }>
                 
                 <PaymentResultContent />
-            </Suspense> */}
+            </Suspense>
         </Container>
     );
 }
