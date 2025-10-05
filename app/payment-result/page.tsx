@@ -10,7 +10,8 @@ export default function PaymentResultPage() {
                     <p>در حال بارگذاری...</p>
                 </div>
             }>
-                <PaymentResultContent />
+                PaymentResultPage
+                {/* <PaymentResultContent /> */}
             </Suspense>
         </Container>
     );
